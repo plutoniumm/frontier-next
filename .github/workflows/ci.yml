@@ -21,9 +21,12 @@ jobs:
         uses: actions/checkout@master
 
       - name: Install & Build
-        uses: npm install -g pnpm && pnpm i --no-frozen-lockfile && npm run build
+        run: |
+          npm install -g pnpm
+          pnpm i --no-frozen-lockfile
+          npm run build
 
-      - name: Deploy
+      - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.2.3
         with:
           branch: gh-pages

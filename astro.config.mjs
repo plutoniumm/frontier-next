@@ -1,14 +1,4 @@
 export default ( {
-	projectRoot: './',
-	public: './public/',
-	dist: './dist/',
-	src: './src/',
-	layouts: './src/layouts/',
-	lib: './src/functions/',
-	components: './src/components/',
-	data: './src/data/',
-	pages: './src/pages/',
-
 	render: [
 		'@astrojs/markdown-remark',
 		{

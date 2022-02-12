@@ -1,18 +1,13 @@
 <script>
   let count = 0;
 
-  function add() {
-    count += 1;
-  }
-
-  function subtract() {
-    count -= 1;
-  }
+  const add = () => (count += 1);
+  const minus = () => (count -= 1);
 </script>
 
 <div class="counter">
-  <button on:click={subtract}>-</button>
-  <pre>{ count }</pre>
+  <button on:click={minus}>-</button>
+  <pre>{count}</pre>
   <button on:click={add}>+</button>
 </div>
 <div class="message">
@@ -20,7 +15,7 @@
 </div>
 
 <style>
-  .counter{
+  .counter {
     display: grid;
     font-size: 2em;
     grid-template-columns: repeat(3, minmax(0, 1fr));

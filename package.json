@@ -7,6 +7,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "predeploy": "npm run build",
     "deploy": "npx gh-pages -d dist -t true"
   },
   "devDependencies": {

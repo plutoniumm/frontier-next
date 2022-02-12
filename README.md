@@ -1,2 +1,1 @@
-# frontier-next
-Making Frontier v2
+# Frontier@next

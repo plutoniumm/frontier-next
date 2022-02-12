@@ -1,0 +1,18 @@
+---
+import Head from './head.astro';
+
+const { content } = Astro.props;
+---
+
+<html>
+  <Head title={content.title} description={content.description}/>
+
+  <body>
+     <h1>{content.title}</h1>
+    <h2>{content.description}</h2>
+    <img src={content.image} alt="">
+    <article>
+      <slot />
+    </article>
+  </body>
+</html>

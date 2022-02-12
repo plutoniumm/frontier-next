@@ -1,6 +1,7 @@
 ---
-import Counter from '../components/Counter.svelte';
+import Counter from 'component:Counter';
 import Head from 'layout:head';
+import AutoLay from 'layout:default';
 ---
 
 <html lang="en">
@@ -8,10 +9,12 @@ import Head from 'layout:head';
 		<Head title="Frontier | Home" description=""/>
 	</head>
 	<body>
-	Hi
-	{import.meta.env.DEV ? "DEV" : "PROD"}
-        <Counter client:visible>
-			<h1>Hello, Svelte!</h1>
-		</Counter>
+		<AutoLay>
+		Hi
+		{import.meta.env.DEV ? "DEV" : "PROD"}
+			<Counter client:visible>
+				<h1>Hello, Svelte!</h1>
+			</Counter>
+		</AutoLay>
 	</body>
 </html>

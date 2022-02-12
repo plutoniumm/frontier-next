@@ -1,12 +1,14 @@
 ---
-import Head from './head.astro';
-
-const { title } = Astro.props;
+import Nav from 'component:nav';
 ---
-<html lang="en">
-    <Head title={title} description=""/>
-	<body>
-        Hi
-        <slot/>
-	</body>
-</html>
+
+<Nav/>
+<main>
+    <slot/>
+</main>
+
+<style>
+main{
+    margin-top: 3rem;
+}
+</style>

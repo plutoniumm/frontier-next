@@ -12,7 +12,7 @@
                 "src/data/*"
             ],
             "component:*": [
-                "src/components/*.astro"
+                "src/components/*.svelte"
             ]
         }
     }

@@ -1,0 +1,92 @@
+---
+layout: 'layout:post'
+type: Economics
+description: "The Failure of the Soviet Union"
+cdn: posts/geovec/027.svg
+source: {Multiple: null}
+count: "027"
+---
+
+Sidenote: As a common misconception. In the modern capitalist system, NO ONE actually owns the means of production, not even the managers. It is owned by the company as an entity itself, CONTROLLED by all shareholders (millions of people) and RUN BY all employees. Sidenote 2: The advantage of having a shares based ownership system is that people can choose which country they have faith in and only own that one. They don't need to pay for those companies they don't have faith in.
+
+Russia in the 1917 was a very unequal place. Despite being the most unequal place on Earth, even today's South Africa looks like Disneyland compared to the Russia of the Emipre. This caused there to be a massive overthrow of the govt and in 1928 the vision of Marx and Lenin was to be brought to fruition by a lunatic by the (not) name of Joseph Stalin.
+
+## Food Production
+In 1928 Stalin announced the first 5 year plan. One later copied by China and today Even North Korea (how does one sentence sound so depressing damn.). As a part of this plan Stalin decided that food production will receive the most attention. So he set up a system where Input & Output AT EVERY STAGE was monitored by the govt and even fixed time spans were allotted for throughput.
+
+The whole system was rigged for failure. There was a gross over-reporting of numbers, no oversight on the workers and even the govt employees and no prepration for under-production. Anyone who saw anything wrong happening also just went along with it because who wants to get sent to a gulag for being the Communist version of Anti-National.
+
+Even if a senior official saw the worker doing something wrong, how does he expect to punish the him, because the worker was afterall the foundation of the Soviet system, Soviet literally means approximately Workers Council. So everyone misreported figures enough to not get gulaged.
+
+### Vavilov
+Nikolai Vavilov was the first person to figure out centers of origins of plant species and that interbreeding some species can make them resistant to cold thus solving Soviet Union's frequent food shortage due to famine problem. Stalin however thought that this was a sign that the system was not working well, saw it as political dissent and sentenced him to a gulag. Stalin killed Vavilov by Starvation.
+
+What followed was known today as the Holodomor.
+
+Vaivlov's fellow scientists at Pavlovsk Experimental Station in Stalingrad, even barricaded themselves inside the building during the Siege of Stalingrad to prevent anyone from getting inside and even so much as touching the seeds. Hundreds of thousands of Grains all around but not a single one to eat. Vavilov's team defended the Seed Station to death by starvation.
+
+Vavilov and his team are directly responsible for creating the Svalbard Global Seed Vault.
+
+The following are the Scientists we remember -
+- Botanist Alexander Stchukin - Expert in GroundNuts
+- Liliya Rodina - Expert in Oats
+- Dimitry Ivanov - Expert on Rice
+- Georgi K. Kriyer - Expert in Medicinal Plants
+- Steheglov, G. Kovalesky
+- N. Leontjevsky
+- A. Malygina
+- A. Korzun
+- Nikolai Vavilov
+
+## Incentive
+While it is true that in a socialist system workers have no incentive to work, since they can't be fired and they will be given any resources they need. This is also so in the modern capitalist system where salaried employees need to do a bare minimum of not getting fired. What makes the socialist system actually worse is
+
+1. By not having consequences and DUMPing resources into meeting quota, the un-incentive is made far worse by any means measurable since if 200 people "are not able to" do a particular job, the state will just send 200 more. This effectively creates a feedback loop with no lower end. Working Ex. If you as a worker make the most optimum output, in the next 5 year plan you will get the same input and be expected to repeat with a small pat. What is a better idea is, be heavily inefficient, the next 5 year plan will dump more resources and then just trivially increase marginal productivity. You will be seen as a hero. So why tf not? This is what we saw in reality. The soviet numbers did go up, but well, did they didn't really mean anything.
+
+2. By everyone owning the means of production, No one owns the means of production and therefore has no sense of responsibility. In a capitalist system, if Elon Musk works hard for Tesla, his money grows directly and does so proportionately as we say. In a socialist system if a manager works hard and gets efficient production, due to the sheer size of the state, his work will just get distributed and he will not see any visible change at times even due to other people slacking off more.
+
+The way the soviet system worked was that if half of a million needed potatoes were produced then the state would just send 2x the labour, 2x the fertilizer & give 2x the land. Because the state said you will get potatoes, so by god come what may you will get potatoes. This is not really good economics but makes everyone feel good in the short term. This is part of also the reason to why russia had very low competitiveness in any field which did not help their propaganda. Their Space Science was ground breaking, but food science was regressive. They went to space but people starved to death.
+
+## Economics
+The soviets were obsessed with paper growth so they put maximum resources into making the means of production than actually producing anything. Which basically means that we have more Iron Presses but less Kettles. So on paper GDP/capita will shoot up, we will produce a lot but not do anything with it. Since were are producing things which produce. However this did have an advantage to them in WW2 since this meant that anytime they needed to they could just turn around and produce whatever was needed at astronomical rates.
+
+So in WW2 they did, they defeated the blitzkrieg not by smartness but by numbers. The tanks were bad and breaking, but there were many more times of them. This is basically how the soviets work in general, just win with numbers.
+
+Post Stalin, the policies enacted by the govt were extremely liberal but oriented to standard of living, so production of awful means of production became production of aweful cars and so on. But they could still not depart to far from its Marxist Leninist figures. So Russia being a large country in 1991 was on paper the 2nd largest economy, but was on its knees. People had a very poor actual lifestyle.
+
+## Data
+The following data is from The Madison Project.
+
+| GDP PPP/Cap | Russia | USA         | Best  | World |
+|-------------|--------|-------------|-------|-------|
+| 1913        | 1488   | 5301        | 5301  | 1526  |
+| 1929        | 2979   | 10543       | 10543 | 4770  |
+| 1937        | 4634   | 10450       | 10450 | 5240  |
+| 1991        | 7840   | 24342 (lol) | 24342 | 5505  |
+| 2008        | 7904   | 31178       | 31178 | 7614  |
+
+
+Mortality & GDP PPP Over time
+
+| GDP PPP/Cap | Infant Mortality(<5) | GDP PPP/cap |
+|-------------|----------------------|-------------|
+| **1920**    |                      |             |
+| USSR        | 296.54               | 2150        |
+| USA         | 184.93               | 7400        |
+| World       | 350ish               | 2900        |
+|             |                      |             |
+| **1991**    |                      |             |
+| USSR        | 28                   | 7840        |
+| USA         | 12                   | 24342       |
+| World       | 64.5                 | 5505        |
+|             |                      |             |
+| **2019**    |                      |             |
+| Russia      | 5.8                  | 11497       |
+| USA         | 6.5                  | 65297       |
+| World       | 37.7                 | 18381       |
+
+
+So even while Russia's absolute GDP was massive we can see that relative to the world they are below average per person. The state did very well. The people did not. USSR was an ideal example of a state where its successful on a macro scale i.e GDP, Nukes & Space Race but a failure on a micro scale i.e Infant Mortality, Hunger and Quality of life. In all macro cases they were better than average, but in all micro cases they were worse than average. A flipped opposite example could be Switzerland where on a macro scale they are basically non existant but on a micro scale people are doing very very very well.
+
+## Conclusion
+Failure of Russia is not failure of socialism but instead failure of PURE socialism. Which is just political ideology getting in the way of good economics.

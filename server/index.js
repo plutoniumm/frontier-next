@@ -1,8 +1,9 @@
 const fs = require( 'fs' );
 const yaml = require( 'js-yaml' );
 const { db } = require( './db' );
+const { log } = console;
 
-const sub_folder = './_posts/Math/';
+const sub_folder = './_posts/Books/Eco_Engg/';
 
 const meta = ( raw ) => {
     const json = yaml.load( raw );
@@ -16,7 +17,7 @@ const meta = ( raw ) => {
 const parter = part => {
     if ( !part ) return '00';
     return +part < 10 ? '0' + part : part;
-}
+};
 
 const directory = fs
     .readdirSync( sub_folder )
@@ -25,14 +26,13 @@ const directory = fs
         const date = e
             .split( '-' ) // Get Date From Title
             .map( e => +e )
-            .filter( Number ) // Convert to Numbers
-            .filter( e => e < 3000 ) // Remove Infinity
+            .slice( 0, 3 )
             .reverse();
 
-        const d2 = +new Date( `${ +date[ 1 ] } ${ +date[ 0 ] + 1 } ${ +date[ 2 ] }` );
+        const d2 = +new Date( `${ +date[ 1 ] } ${ +date[ 0 ] } ${ +date[ 2 ] }` );
 
         const file = fs.readFileSync( `${ sub_folder }${ e }`, 'utf-8' );
-        const raw = file.split( '---' )[ 2 ];
+        const raw = file.split( '---' ).slice( 2 ).join( '---' );
 
         const { yamled, json } = meta( file.split( '---' )[ 1 ].split( '---' )[ 0 ] );
 
@@ -46,9 +46,11 @@ const directory = fs
     } );
 
 directory.forEach( ( e, i ) => {
+    log( e.file );
+    if ( !e.file.title || !e.file.cover ) process.exit( 1 );
     fs.writeFileSync(
         `${ sub_folder }${ e.name }`,
-        `---\n${ e.yaml }layout: 'layout:post'\n---\n${ e.raw }`
+        `---\nlayout: 'layout:post'\n---${ e.raw }`
     );
     fs.renameSync( `${ sub_folder }${ e.name }`, `${ sub_folder }${ e.id }.md` );
 

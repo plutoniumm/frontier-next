@@ -29,5 +29,9 @@ export default ( {
 	},
 
 
+	buildOptions: {
+		site: 'https://plutoniumm.github.io/frontier-next/',
+	},
+
 	vite: {},
 } );

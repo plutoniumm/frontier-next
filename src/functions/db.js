@@ -1,6 +1,6 @@
 const ssfetch = async ( endpoint ) => {
-    const response = await fetch( `https://api.nukes.in/${ endpoint }` );
-    const json = await response.text();
+    const response = await fetch( `https://api.nukes.in/frontier/${ endpoint }` );
+    const json = await response.json();
     return json;
 };
 

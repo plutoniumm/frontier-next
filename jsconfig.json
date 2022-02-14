@@ -2,8 +2,8 @@
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
-            "lib:*": [
-                "src/functions/*"
+            "lib": [
+                "src/functions/index.js"
             ],
             "layout:*": [
                 "src/layouts/*.astro"

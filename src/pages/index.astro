@@ -1,7 +1,12 @@
 ---
-import Counter from 'component:Counter';
 import Head from 'layout:head';
 import AutoLay from 'layout:default';
+
+import Card from 'component:card';
+
+import {process} from 'lib';
+
+const all_posts = process.url(Astro.fetchContent('./**/*.md'))
 ---
 
 <html lang="en">
@@ -10,10 +15,15 @@ import AutoLay from 'layout:default';
 	</head>
 	<body>
 		<AutoLay>
-		{import.meta.env.DEV ? "Dev" : "There"}
-			<Counter client:visible>
+		<section class="ƒ ƒ∑">
+			{import.meta.env.DEV ?
+				all_posts.map(post => (
+					<Card {...post} client:visible/>
+				))
+			:
 				<h1>Frontier@v2 Coming Soon!</h1>
-			</Counter>
+			}
+		</section>
 		</AutoLay>
 	</body>
 </html>

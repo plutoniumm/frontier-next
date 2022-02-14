@@ -6,3 +6,10 @@
 
 ## Frontier
 Idk I want to make this a templatable format but not sure will see what works out
+
+## Todos
+- WebSpeech API to speak article
+- Search
+- Switch to Falcor?: DB CDN is called again and again, caching will speed up astronomically
+- Unsure
+- - TFJS QNA

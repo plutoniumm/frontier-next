@@ -6,7 +6,9 @@ import Card from 'component:card';
 
 import {process} from 'lib';
 
-const all_posts = process.url(Astro.fetchContent('./**/*.md'))
+const sorter = (a,b) => process.date.math(b.key) - process.date.math(a.key);
+
+const all_posts = process.url(Astro.fetchContent('./**/*.md')).sort(sorter);
 ---
 
 <html lang="en">
@@ -15,7 +17,9 @@ const all_posts = process.url(Astro.fetchContent('./**/*.md'))
 	</head>
 	<body>
 		<AutoLay>
-		<section class="ƒ ƒ∑">
+		<section class="ƒ ƒ∑ ∆-bw mx-a" style="max-width: 1200px;">
+			<Card {...all_posts[0]} size="mx" client:load/>
+
 			{import.meta.env.DEV ?
 				all_posts.map(post => (
 					<Card {...post} client:visible/>

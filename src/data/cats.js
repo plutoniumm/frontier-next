@@ -1,4 +1,4 @@
-[
+export default cats = [
     {
         "name": "politics",
         "description": "Politics & Wars",

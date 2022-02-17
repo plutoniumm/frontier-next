@@ -10,6 +10,8 @@ Idk I want to make this a templatable format but not sure will see what works ou
 ## Todos
 - WebSpeech API to speak article
 - Search
+- Add Citation
 - Switch to Falcor?: DB CDN is called again and again, caching will speed up astronomically
 - Unsure
 - - TFJS QNA
+- - Add Pronoucables

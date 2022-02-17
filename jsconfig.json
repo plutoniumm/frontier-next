@@ -9,11 +9,17 @@
                 "src/layouts/*.astro"
             ],
             "data:*": [
-                "src/data/*"
+                "src/data/*.js"
             ],
             "component:*": [
                 "src/components/*.svelte"
-            ]
+            ],
+            "x10:*": [
+                "src/extensions/*.svelte"
+            ],
+            "ui:*": [
+                "src/shared/*.svelte"
+            ],
         }
     }
 }

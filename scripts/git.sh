@@ -1,5 +1,3 @@
-npm run build;
-
 git add .;
 
 echo "Enter Message";

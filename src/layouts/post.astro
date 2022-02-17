@@ -1,5 +1,9 @@
 ---
 import Head from './head.astro';
+import AutoLay from 'layout:default';
+import Hero from 'component:hero';
+
+const path = Astro.request.url.pathname.split('/').pop();
 const { content } = Astro.props;
 ---
 <html>
@@ -8,11 +12,18 @@ const { content } = Astro.props;
   </head>
 
   <body>
-    <h1>{content.title}</h1>
-    <h2>{content.description}</h2>
-    <img src={content.image} alt="">
-    <article>
-      <slot />
-    </article>
+    <AutoLay>
+      <article class="mx-a fw3">
+        <Hero {path} client:only="svelte"/>
+        <slot />
+      </article>
+    </AutoLay>
   </body>
 </html>
+
+
+<style>
+    article {
+        max-width: 1200px;
+    }
+</style>

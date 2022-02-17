@@ -1,5 +1,5 @@
 const ssfetch = async ( endpoint ) => {
-    const response = await fetch( `https://api.nukes.in/frontier/${ endpoint }` );
+    const response = await fetch( `https://api.nukes.in/frontier${ endpoint }` );
     const json = await response.json();
     return json;
 };
@@ -8,14 +8,18 @@ const ssfetch = async ( endpoint ) => {
 export const cf_kv = {
     type: async ( type ) => {
         const res = await ssfetch( `/type?q=${ type }` );
-        return objectify( res );
+        return res;
     },
     list: async () => {
         const res = await ssfetch( `/all` );
-        return objectify( res );
+        return res;
     },
     get: async ( id ) => {
         const res = await ssfetch( `/get?id=${ id }` );
+        return res;
+    },
+    related: async ( id ) => {
+        const res = await ssfetch( `/related?id=${ id }` );
         return res;
     }
 };

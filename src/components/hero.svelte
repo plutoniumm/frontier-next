@@ -19,6 +19,8 @@
             {response.title}
         </h1>
 
+        <title>{response.title} | Frontier</title>
+
         <div class="nav w-100 ƒ ∆-bw">
             {#if related.prev}
                 <a href={related.prev}>&larr; Prev</a>
@@ -39,9 +41,9 @@
             <img src={process.image(response.count)} alt="" />
             <div class="cover p-abs w-100">{response.cover}</div>
         </div>
-        <div class="sources">
+        <!-- <div class="sources">
             {JSON.stringify(response.source)}
-        </div>
+        </div> -->
     {/await}
 </div>
 

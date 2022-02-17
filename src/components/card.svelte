@@ -13,21 +13,20 @@
     {#await promise}
         {url}
     {:then post}
-        <img
-            class="rx5"
-            style="--w:100%"
-            src={process.image(post.count)}
-            alt=""
-        />
+        <img class="rx5 w-100" src={process.image(post.count)} alt="" />
         <div class="body fw4">
             <div class="meta">
                 <span class="type">{post.type.toUpperCase()}</span> /
                 <span class="date">{process.date.format(key)}</span>
             </div>
             <div class="title fw7">{@html post.title}</div>
-            {#if post.description}
-                <div class="description">{post.description}</div>
-            {/if}
+            <div class="description">
+                {#if post.description}
+                    {post.description}
+                {:else}
+                    <i class="more">Read More &rarr;</i>
+                {/if}
+            </div>
         </div>
     {/await}
 </a>
@@ -37,6 +36,7 @@
         display: inline-block;
         text-wrap: break-word;
         overflow: hidden;
+        margin-bottom: 20px;
         &.sm {
             width: calc(25% - 20px);
         }
@@ -49,20 +49,22 @@
         &.mx {
             width: calc(100% - 20px);
             img {
-                --w: 50% !important;
-                margin-right: 15px;
+                width: 50%;
+            }
+            .body {
+                padding: 0 10px;
             }
         }
 
         img {
-            width: var(--w);
-            height: calc(var(--w) * 0.625);
+            aspect-ratio: 16/10;
             object-fit: cover;
         }
         .body {
             padding: 10px 0;
         }
-        .meta {
+        .meta,
+        .more {
             color: #666;
         }
         .type {
@@ -74,6 +76,8 @@
         .title {
             padding: 5px 0;
             font-size: 1.75rem;
+            height: 3em;
+            overflow: hidden;
         }
     }
 </style>

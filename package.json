@@ -1,13 +1,12 @@
 {
   "name": "frontier",
-  "version": "2.0.0",
-  "private": true,
+  "version": "2.0.1",
   "scripts": {
     "gh-pages": "npx gh-pages -d dist -t true",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "deploy": "sh ./scripts/git.sh"
+    "deploy": "npm run build && sh ./scripts/git.sh"
   },
   "devDependencies": {
     "@astrojs/renderer-solid": "^0.3.1",

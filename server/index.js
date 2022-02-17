@@ -54,5 +54,7 @@ directory.forEach( ( e, i ) => {
     );
     fs.renameSync( `${ sub_folder }${ e.name }`, `${ sub_folder }${ e.id }.md` );
 
+    if ( e.count ) delete e.count;
+    if ( e.part ) delete e.part;
     db.put( e.id, e.file ).then( r => console.log( i, r ) );
 } );

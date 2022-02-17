@@ -1,7 +1,12 @@
 # build output
 dist
-
+tasks/
+drafts/
 node_modules/
+
+scripts/image/*.jp*
+scripts/image/*.svg
+scripts/image/*.png
 
 .env
 .env.production

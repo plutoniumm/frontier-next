@@ -4,6 +4,7 @@
   "scripts": {
     "gh-pages": "npx gh-pages -d dist -t true",
     "dev": "astro dev",
+    "build:gh": "sh ./scripts/build.sh",
     "build": "astro build",
     "preview": "astro preview",
     "deploy": "npm run build && sh ./scripts/git.sh"

@@ -2,6 +2,7 @@
 import Head from './head.astro';
 import AutoLay from 'layout:default';
 import Hero from 'component:hero';
+import Speaker from 'component:addon/speaker';
 
 const path = Astro.request.url.pathname.split('/').pop();
 const { content } = Astro.props;
@@ -17,6 +18,7 @@ const { content } = Astro.props;
         <Hero {path} client:only="svelte"/>
         <slot />
       </article>
+      <!-- <Speaker client:only="svelte"/> -->
     </AutoLay>
   </body>
 </html>

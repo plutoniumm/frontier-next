@@ -9,7 +9,7 @@
                 "src/layouts/*.astro"
             ],
             "data:*": [
-                "src/data/*.js"
+                "/src/data/*.js"
             ],
             "component:*": [
                 "src/components/*.svelte"

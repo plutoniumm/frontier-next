@@ -1,0 +1,36 @@
+---
+import Head from 'layout:head';
+import AutoLay from 'layout:default';
+
+import {blogs} from '../data/digest.js';
+
+import {process} from 'lib';
+---
+
+<html lang="en">
+	<head>
+		<Head title="Frontier | Digest" description=""/>
+	</head>
+	<body>
+		<AutoLay client:load>
+			<script src="/macro/Megacard"></script>
+			<link rel="stylesheet" href="/macro/Megacard/bundle.css">
+
+			<div id="digestor">{JSON.stringify(blogs)}</div>
+			<script>
+			const target = document.getElementById('digestor');
+			const blogs = JSON.parse(target.innerHTML)
+					.map(blog=> new MegaCard({target,props:{url:blog.url}}) )
+			</script>
+
+			<style>
+				h1 {
+					color: #ff3e00;
+					text-transform: uppercase;
+					font-size: 4em;
+					font-weight: 100;
+				}
+			</style>
+		</AutoLay>
+	</body>
+</html>

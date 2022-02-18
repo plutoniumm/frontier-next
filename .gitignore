@@ -3,6 +3,7 @@ dist
 tasks/
 drafts/
 node_modules/
+**/node_modules/
 
 scripts/image/*.jp*
 scripts/image/*.svg

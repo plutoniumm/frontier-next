@@ -3,6 +3,7 @@ import Head from 'layout:head';
 import AutoLay from 'layout:default';
 
 import Card from 'component:card';
+import Alert from 'ui:alert';
 
 import {process} from 'lib';
 
@@ -18,14 +19,13 @@ const all_posts = process.url(Astro.fetchContent('./**/*.md')).sort(sorter);
 	<body>
 		<AutoLay>
 		<section class="ƒ ƒ∑ ∆-bw mx-a" style="max-width: 1200px;">
-			<div class="fw3 p10 m20 †c mx-a rx5" style="font-size:1.1rem;background:#c338;border:1px solid #c33;">
-				This is still a work in progress!, I've just put it back up for my own convenience
-			</div>
-			<Card {...all_posts[0]} size="mx" client:load/>
+			<Alert level="1" text="This is still a work in progress!, I've just put it back up for my own convenience"/>
 
-			{all_posts.map(post => (
+			<!-- <Card {...all_posts[0]} size="mx" client:load/> -->
+
+			<!-- {all_posts.map(post => (
 				<Card {...post} client:visible/>
-			))}
+			))} -->
 		</section>
 		</AutoLay>
 	</body>

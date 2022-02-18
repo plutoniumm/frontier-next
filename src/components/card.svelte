@@ -1,6 +1,8 @@
 <script>
     import { db, process } from "lib";
 
+    import Button from "ui:button";
+
     export let //
         size = "md", // sm = 25%, md = 33%, lg = 50%, mx = 100%
         url,
@@ -24,7 +26,16 @@
                 {#if post.description}
                     {post.description}
                 {:else}
-                    <i class="more">Read More &rarr;</i>
+                    <i class="more">Click to Go &rarr;</i>
+                {/if}
+                {#if size === "mx"}
+                    <Button
+                        class="p-rel"
+                        style="top:4rem;"
+                        text="Read More"
+                        on:click={(window.location.href = url)}
+                        client:media="(min-width: 768px)"
+                    />
                 {/if}
             </div>
         </div>
@@ -33,6 +44,7 @@
 
 <style lang="scss">
     a {
+        contain: content;
         display: inline-block;
         text-wrap: break-word;
         overflow: hidden;

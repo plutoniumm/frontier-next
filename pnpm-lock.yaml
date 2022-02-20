@@ -3,7 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@astrojs/renderer-solid': ^0.3.1
   '@rollup/plugin-commonjs': ^17.0.0
-  '@rollup/plugin-node-resolve': ^11.0.0
+  '@rollup/plugin-node-resolve': 13.1.3
   '@tensorflow-models/qna': ^1.0.0
   '@tensorflow/tfjs-backend-wasm': ^3.13.0
   '@tensorflow/tfjs-converter': ^3.13.0
@@ -33,7 +33,7 @@ dependencies:
 devDependencies:
   '@astrojs/renderer-solid': 0.3.1
   '@rollup/plugin-commonjs': 17.1.0_rollup@2.67.2
-  '@rollup/plugin-node-resolve': 11.2.1_rollup@2.67.2
+  '@rollup/plugin-node-resolve': 13.1.3_rollup@2.67.2
   astro: 0.22.20_postcss-load-config@3.1.3
   autoprefixer: 10.4.2
   js-yaml: 4.1.0
@@ -521,11 +521,11 @@ packages:
       rollup: 2.67.2
     dev: true
 
-  /@rollup/plugin-node-resolve/11.2.1_rollup@2.67.2:
-    resolution: {integrity: sha512-yc2n43jcqVyGE2sqV5/YCmocy9ArjVAP/BeXyTtADTBBX6V0e5UMqwO8CdQ0kzjb6zu5P1qMzsScCMRvE9OlVg==}
+  /@rollup/plugin-node-resolve/13.1.3_rollup@2.67.2:
+    resolution: {integrity: sha512-BdxNk+LtmElRo5d06MGY4zoepyrXX1tkzX2hrnPEZ53k78GuOMWLqmJDGIIOPwVRIFZrLQOo+Yr6KtCuLIA0AQ==}
     engines: {node: '>= 10.0.0'}
     peerDependencies:
-      rollup: ^1.20.0||^2.0.0
+      rollup: ^2.42.0
     dependencies:
       '@rollup/pluginutils': 3.1.0_rollup@2.67.2
       '@types/resolve': 1.17.1

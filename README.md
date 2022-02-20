@@ -14,3 +14,6 @@
 - Unsure
 - - TFJS QNA
 - - Dark Mode
+- Brain Games
+- - Word Search
+- - Sudoku

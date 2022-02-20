@@ -14,7 +14,16 @@
     "astro": "0.22.20",
     "autoprefixer": "^10.4.2",
     "js-yaml": "4.1.0",
-    "postcss-load-config": "3.1.3"
+    "postcss-load-config": "3.1.3",
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-node-resolve": "^11.0.0",
+    "rollup": "^2.3.4",
+    "rollup-plugin-css-only": "^3.1.0",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-svelte": "^7.0.0",
+    "rollup-plugin-terser": "^7.0.0",
+    "svelte": "^3.0.0",
+    "sirv-cli": "^2.0.0"
   },
   "dependencies": {
     "@tensorflow-models/qna": "^1.0.0",

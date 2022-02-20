@@ -5,6 +5,7 @@
 
     const color = (l) => {
         if (l === 1) return "192,48,48";
+        if (l === 5) return "48,192,48";
         return "192,48,48";
     };
 </script>

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="astro-BXZW3AQE"><head>
+<!DOCTYPE html><html><head>
     <!-- Settings --><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="utf-8">
 
@@ -37,9 +37,8 @@
 <meta name="google" content="nopagereadaloud">
 <meta name="rating" content="adult">
 
-
-<script type="module" src="../../../assets/kmz7qfk0-00300.7da27cf2.js"></script></head><body>
-  <link rel="stylesheet" href="../../../assets/nav.svelte_svelte_type_style_lang.ce989662.css"><link rel="stylesheet" href="../../../assets/speaker.svelte_svelte_type_style_lang.33cc27e1.css"><link rel="stylesheet" href="../../../assets/kmz7qfk0-00300.69660f41.css">
+<script type="module" src="../../../assets/kmz7qfk0-00300.93c92ca3.js"></script></head><body>
+  <link rel="stylesheet" href="../../../assets/nav.svelte_svelte_type_style_lang.ce989662.css"><link rel="stylesheet" href="../../../assets/speaker.svelte_svelte_type_style_lang.33cc27e1.css"><link rel="stylesheet" href="../../../assets/kmz7qfk0-00300.90688a08.css">
 
 
 
@@ -47,8 +46,8 @@
     <nav class="ƒ ∆-bw w-100 p-fix svelte-c5m511"><a href="/" class="ƒ p10"><img width="32px" height="32px" src="/icons/frontier.svg" alt="logo" class="svelte-c5m511">
         <div class="fw4">Frontier</div></a>
 </nav>
-<main class="astro-OREARASW">
-    <article class="mx-a fw3 astro-BXZW3AQE">
+<main class="mx-a astro-CL3FEDET">
+    <article class="mx-a fw3">
         <astro-root uid="Z1fEGAf"></astro-root>
         <h1 id="react" class="astro-5X7MI4PI">React</h1><p class="astro-5X7MI4PI">React is a virtual DOM library. They diverge from the traditional ShadowDOM. It traces back the dependency graph every time there needs to be updated. To increment a one it checks the div, goes up checks the div goes up checks the section goes up checks everything and concludes that we need to make a small 4 a 5. React REGENERATES the whole branch every time there is a change in the tree. React therefore is for all practical purposes NOT reactive.</p><p class="astro-5X7MI4PI">Even the react team thinks its not fast enough, otherwise what was the point of</p><ul class="astro-5X7MI4PI">
 <li class="astro-5X7MI4PI">shouldComponentUpdate</li>
@@ -75,10 +74,9 @@ this
 </tbody></table><p class="astro-5X7MI4PI">We don’t need to be as fast as mobiles, we need to be as fast as VR headsets, smart watches, TVs, fridges etc.</p><p class="astro-5X7MI4PI">React and Vue are libraries they are constrained by file sizes. Svelte is a compiler, it is not. Unused features will simply not get compiled. React is not useful unless you’re building facebook. Like literally, Facebook. React was created to deal with very very large systems, and shines there. For smaller systems, it is pure Bloat.</p><p class="astro-5X7MI4PI">Unless your application is of very large scale, React will do little good. However, if your application is actually large, React is probably the most powerful and efficient way to do it out there today.</p><h2 id="facebook-still-thinks-theyre-a-startup" class="astro-5X7MI4PI">Facebook still thinks they’re a startup</h2><p class="astro-5X7MI4PI">React is made by facebook. They initially had a problem where they used to sneak in random clauses in the license. This is a very facebook thing to do. They have since fixed this problem and have completely moved to MIT Lic. If you are a startup. DON’T USE REACT. React anyway (around 2014) was successful because of Angular’s failure.</p><p class="astro-5X7MI4PI">They rewrite the engine very frequently. This is problematic for companies and it could take them MONTHS to migrate. Facebook maintains react like they are still startup. Classes then Functional Components then Hooks 🤦🏻‍♂️. Also. WHY IS REDUX SYNCHRONOUS. WHY. Then you would import redux thunk to solve that problem.</p><p class="astro-5X7MI4PI">Lastly a whole library, brings its own vulnerabilities.</p><h1 id="graphql" class="astro-5X7MI4PI">GraphQL</h1><p class="astro-5X7MI4PI">Choosing how to implement an API is a matter of multiple considerations. Who uses them? For what? Are these people internal or external? The answers will most probably influence your choice of the API style and implementation, doesn’t it? Most people don’t chose APIs because of any of these questions but simply because it sounds cool or might someway remotely be what we are trying to improve on.</p><p class="astro-5X7MI4PI">The current most popular example of this behaviour is GraphQL. Are you building a modern single page application with React? Awesome, use GraphQL! Facebook, Airbnb, Paypal, Netflix, they all do it so it must be a good fit.</p><p class="astro-5X7MI4PI">If you use Facebook-scale tooling without having a Facebook-scale organization and Facebook-scale problems, it might do more harm than good. It’s the same reason why chaos monkey makes sense for Netflix while it doesn’t for your two docker containers running on a 5$ machine on digital ocean.</p><h2 id="github" class="astro-5X7MI4PI">Github</h2><p class="astro-5X7MI4PI">Github API is publicly available. They have big numbers of API consumers, all with wildly different requirements. A truly RESTful API will be and was a pain in such cases. In this particular use-case, GraphQL might actually be a good choice. Instead of trying to solve each problem, they rather offer a generic GraphQL API. You’re probably not GitHub, are you?</p><p class="astro-5X7MI4PI">What are the trade-offs that GitHub is willing to accept when publicly exposing a GraphQL API? They have a whole team behind their GraphQL API, making sure you, the user, does not accidentally or intentionally break their systems. There are watch videos of them talking at conferences about the complex systems they built to secure their API and keep it stable. They’ve built tooling for GraphQL specific analytics to get better insights into API usage.</p><h2 id="security" class="astro-5X7MI4PI">Security</h2><p class="astro-5X7MI4PI">Securing a RESTful system is very simple. Any HTTP-based API framework lets you define your routes and attach standardized middlewares to solve the problems listed above. In a standard HTTP request for ONE CALL only ONE CONTROLLER gets triggered ever. With GraphQL on the other hand, a single Query might result in thousands of calls on the controllers (resolvers) of the API. There is no simple way to solve this problem.</p><p class="astro-5X7MI4PI">GraphQL itself is also a very complicated API and therefore in most cases people use external libraries. This brings back the same react problems, Are you using this library efficiently enough? Is it safe? Are there any unknown edge cases?</p><h3 id="schema-traversal-attacks" class="astro-5X7MI4PI">Schema traversal attacks</h3><p class="astro-5X7MI4PI">Are you leaking sensitive information through the introspection Query? What if someone scrapes your schema every day to track changes and try attacks whenever you update your schema? Are you aware of schema traversal attacks? A user might be allowed to see his own account balance, but how about his/her friends? Is it possible to traverse the schema in a way you didn’t anticipate which leaks data? How do you test for this kind of behavior and ensure it’s not possible for your own schema?</p><p class="astro-5X7MI4PI">Beware that code is a very tricky thing. At times people who create libraries don’t really understand what it can do themselves. There is a reason for why Shopify does GraphQL Bug Bounties. Or why Facebook does everything bug bounties. What this means in simple words is, your API is AT LEAST as vulnerable as Shopify’s iron clad API.</p><p class="astro-5X7MI4PI">GraphQL as a server-side language and should be treated as such. Unless you know what you’re doing, which in statistically more cases you are not, don’t use GQL.</p>
       </article>
 </main>
-<footer class="w-100 p10 †c astro-OREARASW">
-Fronter © 2022 | Plutonium
+<footer class="w-100 p10 †c astro-CL3FEDET">
+    Fronter © 2022 | Plutonium
 </footer>
 
 
-  
-</body></html>
+  </body></html>

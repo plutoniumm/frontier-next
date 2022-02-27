@@ -10,7 +10,7 @@
     "deploy": "npm run build && sh ./scripts/git.sh"
   },
   "devDependencies": {
-    "@astrojs/renderer-solid": "^0.3.1",
+    "@astrojs/renderer-solid": "0.4.0",
     "astro": "0.22.20",
     "autoprefixer": "^10.4.2",
     "js-yaml": "4.1.0",

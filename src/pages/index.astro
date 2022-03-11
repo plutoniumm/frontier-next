@@ -19,13 +19,15 @@ const all_posts = process.url(Astro.fetchContent('./**/*.md')).sort(sorter);
 	<body>
 		<AutoLay>
 		<section class="ƒ ƒ∑ ∆-bw mx-a" style="max-width: 1200px;">
-			<Alert level="5" text="I am currently on hiatus right now, blogs are being imporved"/>
-			<Alert level="1" text="This is still a work in progress!, I've just put it back up for my own convenience"/>
+			<div class="w-100">
+				<Alert level="5" text="I am currently on hiatus right now, blogs are being improved"/>
+				<Alert level="1" text="This is still a work in progress!, I've just put it back up for my own convenience"/>
+			</div>
 
 			<Card {...all_posts[0]} size="mx" client:load/>
 
-			{all_posts.map(post => (
-				<Card {...post} client:visible/>
+			{all_posts.map((post, index) => (
+				<Card {...post} client:visible />
 			))}
 		</section>
 		</AutoLay>

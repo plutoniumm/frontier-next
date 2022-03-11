@@ -6,13 +6,39 @@ import Nav from 'component:nav';
 <main class="mx-a">
     <slot/>
 </main>
-<footer class="w-100 p10 †c">
+
+<div id="overlay" class="p-fix w-100 h-100 †c d-n">
+
+</div>
+
+<footer class="p10 †c">
     Fronter © 2022 | Plutonium
+    <div class="w-100 ƒ ƒ∑ †l">
+        <ul>
+            <li><a href="/">Home</a></li>
+        </ul>
+    </div>
 </footer>
 
 <style>
+.d-n{
+    display: none;
+}
+#overlay {
+  top: 0;
+  left: 0;
+  z-index: 99999;
+}
+footer{
+    margin-top: 50vh;
+    width: calc(100% - 20px);
+    background: #eee;
+}
+ul{
+    list-style-type: none;
+}
 main{
     margin-top: 5rem;
-    max-width: 1200px; 
+    max-width: 1200px;
 }
 </style>

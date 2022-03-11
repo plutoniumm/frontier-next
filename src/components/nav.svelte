@@ -1,4 +1,7 @@
-<nav class="ƒ ∆-bw w-100 p-fix">
+<nav
+    class="ƒ ∆-bw w-100 p-fix"
+    style={import.meta.env.DEV ? "border-top: 3px solid #f00" : ""}
+>
     <a href="/" class="ƒ p10">
         <img width="32px" height="32px" src="/icons/frontier.svg" alt="logo" />
         <div class="fw4">Frontier</div>

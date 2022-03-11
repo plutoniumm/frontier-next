@@ -2,7 +2,14 @@
     export let //
         path;
 
-    import { db, process } from "lib";
+    import { db, process, handle } from "lib";
+
+    const enlargeImage = (e) => {
+        const image = e.target;
+
+        handle.overlay("img", image);
+        return 0;
+    };
 
     const promise = Promise.all([db.get(path), db.related(path)]);
 </script>
@@ -37,8 +44,11 @@
             {/if}
         </div>
 
-        <div class="img p-rel w-100">
-            <img src={process.image(response.count)} alt="" />
+        <div
+            on:click={enlargeImage}
+            class="img p-rel w-100"
+            style={`--bg: url("${process.image(response.count)}")`}
+        >
             <div class="cover p-abs w-100">{response.cover}</div>
         </div>
         <!-- <div class="sources">
@@ -51,9 +61,12 @@
     .nav {
         padding: 5px 0;
     }
-    img {
-        width: 100%;
-        max-height: 300px;
+    .img {
+        background: var(--bg) no-repeat;
+        background-size: cover;
+        background-position: center center;
+        overflow: hidden;
+        height: 300px;
     }
     .cover {
         background: linear-gradient(transparent, #000);

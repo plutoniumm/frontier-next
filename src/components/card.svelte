@@ -13,7 +13,20 @@
 
 <a href={url} class="m10 ƒ ƒ∑ {size}">
     {#await promise}
-        {url}
+        <img
+            class="rx5 w-100 ghost vibe"
+            src="https://via.placeholder.com/8x5/bbb.webp?text=O"
+            alt=""
+        />
+        <br />
+        <div class="body fw4" style="background:#fff;">
+            <mark>SAMPLE TITLE</mark> <br /><br />
+            <mark class="†j" style="line-height: 1.5em;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Architecto nihil dignissimos velit vero quod quibusdam voluptate
+                blanditiis expedita dolor veniam.
+            </mark>
+        </div>
     {:then post}
         <img class="rx5 w-100" src={process.image(post.count)} alt="" />
         <div class="body fw4">
@@ -43,8 +56,20 @@
 </a>
 
 <style lang="scss">
+    @keyframes vibe {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0.66;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
     a {
         contain: content;
+        min-width: 300px;
         display: inline-block;
         text-wrap: break-word;
         overflow: hidden;
@@ -70,7 +95,6 @@
 
         img {
             aspect-ratio: 16/10;
-            object-fit: cover;
         }
         .body {
             padding: 10px 0;
@@ -91,5 +115,13 @@
             height: 3em;
             overflow: hidden;
         }
+    }
+    mark {
+        background: #bbb;
+        color: #bbb;
+        animation: vibe 1s infinite ease;
+    }
+    .vibe {
+        animation: vibe 1s infinite ease;
     }
 </style>

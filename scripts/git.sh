@@ -1,6 +1,14 @@
 git add .;
 
-echo "Enter Message";
+# while true; do
+#     read -p "Run Build Test?" yn
+#     case $yn in
+#         [Yy]* ) if npm run build ; then echo "Enter Message" else exit fi;;
+#         [Nn]* ) exit;;
+#         * ) echo "Please answer yes or no.";;
+#     esac
+# done
+
 read msg;
 git commit -m "$msg";
 

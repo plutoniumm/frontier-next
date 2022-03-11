@@ -6,7 +6,8 @@
 
 <div>
 	<!-- Hi -->
-	Hi
+	{type}
+	{data?.text || "No data"}
 </div>
 
 <style>

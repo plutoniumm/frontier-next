@@ -21,9 +21,7 @@ jobs:
         uses: actions/checkout@master
 
       - name: Install & Build
-        run: |
-          npm install -g pnpm
-          npm run build:gh
+        run: npm run build:gh
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.2.3

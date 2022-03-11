@@ -52,6 +52,8 @@
                 {/if}
             </div>
         </div>
+    {:catch error}
+        {@const err = error}
     {/await}
 </a>
 

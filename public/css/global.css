@@ -1,3 +1,7 @@
 body{
     font-family: 'IBM Plex Sans', sans-serif;
+    --theme: 255,96,96;
+}
+::selection{
+    background: rgba(var(--theme), 0.66);
 }

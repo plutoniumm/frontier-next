@@ -5,15 +5,13 @@
     "gh-pages": "npx gh-pages -d dist -t true",
     "dev": "rm -rf dist && astro dev",
     "build:gh": "sh ./scripts/build.sh",
-    "build": "astro build",
+    "build": "rm -rf dist && astro build",
     "preview": "astro preview",
     "deploy": "sh ./scripts/git.sh"
   },
   "devDependencies": {
-    "@astrojs/renderer-solid": "0.4.0",
     "astro": "0.22.20",
     "autoprefixer": "^10.4.2",
-    "js-yaml": "4.1.0",
     "postcss-load-config": "3.1.3",
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "13.1.3",
@@ -25,12 +23,15 @@
     "svelte": "^3.0.0",
     "sirv-cli": "^2.0.0"
   },
-  "dependencies": {
+  "optionalDependencies": {
+    "js-yaml": "4.1.0",
+    "node-fetch": "3.2.0",
     "@tensorflow-models/qna": "^1.0.0",
     "@tensorflow/tfjs-backend-wasm": "^3.13.0",
     "@tensorflow/tfjs-converter": "^3.13.0",
-    "@tensorflow/tfjs-core": "^3.13.0",
-    "node-fetch": "3.2.0",
+    "@tensorflow/tfjs-core": "^3.13.0"
+  },
+  "dependencies": {
     "predefined": "1.1.0"
   }
 }

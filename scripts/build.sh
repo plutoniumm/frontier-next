@@ -1,9 +1,12 @@
 pnpm i --no-frozen-lockfile;
 
-cd macro/MegaCard;
+cd macro;
+rm -rf dist;
+echo "Building Externals";
 pnpm i --no-frozen-lockfile;
 
 npm run build;
 
-cd ../../
+cd ../;
+echo "Building Main";
 npm run build;

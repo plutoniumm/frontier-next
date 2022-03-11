@@ -9,6 +9,7 @@ git add .;
 #     esac
 # done
 
+echo "Enter Message:"
 read msg;
 git commit -m "$msg";
 

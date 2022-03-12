@@ -14,7 +14,8 @@
         z-index: 100;
         top: 0;
         font-size: 1.5rem;
-        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+            0 2px 5px 0 rgba(0, 0, 0, 0.23);
         img {
             margin: 0 5px;
         }

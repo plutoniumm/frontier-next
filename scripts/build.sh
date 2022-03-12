@@ -6,6 +6,7 @@ echo "Building Externals";
 pnpm i --no-frozen-lockfile;
 
 npm run build;
+mv dist ../public/macro;
 
 cd ../;
 echo "Building Main";

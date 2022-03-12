@@ -9,7 +9,6 @@
 - Search
 - TOC
 - Digestor
-- AutoText Replacements
 - Switch to Falcor?: DB CDN is called again and again, caching will speed up astronomically
 - Unsure
 - - TFJS QNA

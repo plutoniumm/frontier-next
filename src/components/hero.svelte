@@ -66,7 +66,7 @@
         background-size: cover;
         background-position: center center;
         overflow: hidden;
-        height: 300px;
+        height: 300px !important;
     }
     .cover {
         background: linear-gradient(transparent, #000);

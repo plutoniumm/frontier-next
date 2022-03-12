@@ -1,23 +1,37 @@
 <script>
     export let //
-        icon = null,
-        text = "Read More &rarr;";
+        data = {
+            level: 1,
+            text: "Read More &rarr;",
+            icon: null,
+        };
 </script>
 
-<div class="wrap" {...$$props} on:click>
-    <div class="btn p10 rx5 ƒ ∆-ct">
-        {#if icon}
-            {icon}
+<a class="p-rel btn rx5 l-{data.level}" href="#" {...$$props} on:click>
+    <div class="ƒ ∆-ct">
+        {#if data.icon}
+            {data.icon}
         {/if}
-        {@html text}
+        {data.text}
     </div>
-</div>
+</a>
 
 <style>
+    a {
+        display: inline-block;
+    }
     .btn {
-        text-wrap: break-word;
-        width: 120px;
+        padding: 0.5em 1em;
+        min-width: 100px;
         color: #fff;
-        background: linear-gradient(45deg, #2af, #00f);
+        background: var(--theme);
+        border: 1px solid transparent;
+    }
+    .l-1 {
+        background: linear-gradient(
+            45deg,
+            rgba(var(--theme), 0.8),
+            rgba(var(--theme), 1)
+        );
     }
 </style>

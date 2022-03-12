@@ -1,6 +1,7 @@
 ---
 import Head from 'layout:head';
 import AutoLay from 'layout:default';
+import Button from "ui:button";
 ---
 
 <html lang="en">
@@ -13,6 +14,13 @@ import AutoLay from 'layout:default';
                 <img src="/icons/frontier.svg" width="120px" height="120px" alt="Frontier" class="m20 p-rel"/>
                 <span class="fw1" style="font-size:4em">404</span> <br/>
                 &macr;\_(ツ)_/&macr;
+                <p style="font-size:1.25rem;padding-top:2rem;">
+                    <Button
+                        data={{ text: "Go Home", level: 1 }}
+                        href="/"
+                        client:load
+                    />
+                </p>
             </div>
 		</AutoLay>
 	</body>

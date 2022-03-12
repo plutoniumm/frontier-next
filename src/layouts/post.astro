@@ -10,15 +10,31 @@ const { content } = Astro.props;
 <html>
   <head>
     <Head title={content.title} description={content.description}/>
+    <style>
+      article {
+        line-height:1.75em;
+      }
+    </style>
   </head>
 
   <body>
     <AutoLay>
+      <Hero {path} client:only="svelte"/>
       <article class="mx-a fw3">
-        <Hero {path} client:only="svelte"/>
         <slot />
       </article>
       <!-- <Speaker client:only="svelte"/> -->
     </AutoLay>
   </body>
 </html>
+
+<script>
+  const article = document.querySelector('article');
+  let article_text = article.innerHTML;
+
+  import('/js/switch.js').then(r=>{
+    r.default.forEach(s=>article_text = article_text.replaceAll(s[0], s[1]));
+
+    article.innerHTML= article_text;
+  });
+</script>

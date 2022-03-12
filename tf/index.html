@@ -1,0 +1,94 @@
+<!DOCTYPE html><html lang="en"><head>
+		<!-- Settings --><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+
+<!-- Standard -->
+<title>Frontier | Home</title>
+<meta name="description" content="">
+<meta name="author" content="Plutonium">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://frontier.nukes.in/">
+<meta property="og:title" content="Frontier | Home">
+<meta property="og:description" content="">
+<!-- <meta property="og:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"> -->
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://frontier.nukes.in/">
+<meta property="twitter:title" content="Frontier | Home">
+<meta property="twitter:description" content="">
+<!-- <meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"> -->
+
+<!-- StyleSheets -->
+<link rel="stylesheet" href="http://api.nukes.in/cms/css?name=global.css">
+<link rel="stylesheet" href="http://api.nukes.in/cms/css?name=keyframes.css">
+<link rel="stylesheet" href="/css/global.css">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+
+<!-- Preconnects -->
+<link rel="preconnect" href="https://api.nukes.in/frontier/">
+<link rel="preconnect" href="https://fonts.googleapis.com" comment="for IBM Plex">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" comment="for IBM Plex">
+
+<!-- Privacy & Anti-SEO -->
+<meta name="robots" content="noindex">
+<meta name="google" content="nositelinkssearchbox">
+<meta name="google" content="nopagereadaloud">
+<meta name="rating" content="adult"></head><body>
+	<link rel="stylesheet" href="../assets/tf.01b59fbd.css"><link rel="stylesheet" href="../assets/nav.svelte_svelte_type_style_lang.6389b068.css">
+
+	
+		<nav class="ƒ ∆-bw w-100 p-fix svelte-ko3r9w" style=""><a href="/" class="ƒ p10"><img width="32px" height="32px" src="/icons/frontier.svg" alt="logo" class="svelte-ko3r9w">
+        <div class="fw4">Frontier</div></a>
+</nav>
+<main class="mx-a astro-RDMCNZMH">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script><script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-wasm/dist/tf-backend-wasm.js"></script><script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/qna"> </script><script type="module">
+                const stripHtml=(doc)=>{
+                    doc.querySelectorAll("h1, h2, h3, h4, table").forEach(h=>h.remove());
+
+                    return doc.querySelector('article').textContent.trim();
+                };
+
+                const getPassage = async()=>{
+                    const response = await fetch('/posts/econ');
+                    const parser = new DOMParser();
+                    const text = await response.text();
+
+                    const doc = parser.parseFromString(text, "text/html");
+
+                    console.log('FETCH OK');
+                    return stripHtml(doc);
+                };
+
+                const passage = await getPassage();
+                const question = "How did the soviet system work?";
+
+                tf.wasm.setThreadsCount(4);
+                const r = await tf.setBackend('wasm');
+                if(r) console.log('WASM OK');
+
+                const model = await qna.load();
+                console.log('MODEL OK');
+
+                model.findAnswers(question, passage).then(console.log);
+            </script>
+</main>
+
+<div id="overlay" class="p-fix w-100 h-100 †c d-n astro-RDMCNZMH">
+
+</div>
+
+<footer class="p10 †c astro-RDMCNZMH">
+    Fronter © 2022 | Plutonium
+    <div class="w-100 ƒ ƒ∑ †l astro-RDMCNZMH">
+        <ul class="astro-RDMCNZMH">
+            <li class="astro-RDMCNZMH"><a href="/" class="astro-RDMCNZMH">Home</a></li>
+        </ul>
+    </div>
+</footer>
+
+
+	
+</body></html>

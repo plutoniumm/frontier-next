@@ -11,7 +11,7 @@
     const promise = db.get(key);
 </script>
 
-<a href={url} class="m10 rx10 ƒ ƒ∑ {size}">
+<a href={url} class="m10 rx10 ƒ ƒ∑ p-rel {size}">
     {#await promise}
         <img
             class="w-100 ghost vibe"
@@ -34,7 +34,7 @@
             alt=""
             onerror="this.src='/icons/frontier.svg';this.onerror=null;"
         />
-        <div class="body p20 fw4">
+        <div class="body blur rx10 p20 fw4 p-abs">
             <div class="meta">
                 <span class="type">{post.type.toUpperCase()}</span> /
                 <span class="date">{process.date.format(key)}</span>
@@ -97,6 +97,13 @@
                 width: 50%;
             }
         }
+        .body {
+            width: calc(90% - 40px);
+            left: 5%;
+            bottom: 5%;
+            --sz: 4px;
+            --bg: #fff8;
+        }
 
         img {
             aspect-ratio: 16/10 !important;
@@ -105,11 +112,11 @@
             color: #666;
         }
         .type {
-            font-size: 0.92em;
+            font-size: 0.9em;
         }
         .title {
             padding-top: 10px;
-            font-size: 1.5em;
+            font-size: 1.25em;
             height: 3em;
             overflow: hidden;
         }

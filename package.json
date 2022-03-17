@@ -7,7 +7,7 @@
     "build:gh": "sh ./scripts/build.sh",
     "build": "rm -rf dist && astro build",
     "preview": "astro preview",
-    "deploy": "sh ./scripts/git.sh"
+    "git": "sh ./scripts/git.sh"
   },
   "devDependencies": {
     "astro": "0.22.20",

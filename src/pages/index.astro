@@ -2,8 +2,11 @@
 import Head from 'layout:head';
 import AutoLay from 'layout:default';
 
+import Quote from 'component:quote';
 import Card from 'component:card';
 import Alert from 'ui:alert';
+
+import {bojack} from '../data/quotes.js';
 
 import {process} from 'lib';
 
@@ -26,9 +29,14 @@ const all_posts = process.url(Astro.fetchContent('./**/*.md')).sort(sorter);
 				<!-- <Alert level="1" text="This is still a work in progress!, I've just put it back up for my own convenience"/> -->
 			</div>
 
-			<Card {...all_posts[0]} size="mx" client:load/>
+			<Card {...all_posts[0]} client:load/>
+			<Quote data={bojack} client:load/>
 
-			{all_posts.map((post, index) => (
+			<div class="w-100 o-50 p20">
+				<hr class="mx-a o-50" style="width:calc(75%)" />
+			</div>
+
+			{all_posts.slice(1).map((post, index) => (
 				<Card {...post} client:visible />
 			))}
 		</section>

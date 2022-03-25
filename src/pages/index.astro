@@ -29,14 +29,19 @@ const all_posts = process.url(Astro.fetchContent('./**/*.md')).sort(sorter);
 				<!-- <Alert level="1" text="This is still a work in progress!, I've just put it back up for my own convenience"/> -->
 			</div>
 
+			<div class="p5 m5" style="font-size: 2.5rem;">Frontier</div>
+
+			<hr class="o-0 w-100" />
+
 			<Card {...all_posts[0]} client:load/>
+			<Card {...all_posts[1]} client:load/>
 			<Quote data={bojack} client:load/>
 
 			<div class="w-100 o-50 p20">
 				<hr class="mx-a o-50" style="width:calc(75%)" />
 			</div>
 
-			{all_posts.slice(1).map((post, index) => (
+			{all_posts.slice(2).map((post, index) => (
 				<Card {...post} client:visible />
 			))}
 		</section>

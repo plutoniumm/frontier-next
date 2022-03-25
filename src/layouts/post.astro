@@ -2,7 +2,7 @@
 import Head from './head.astro';
 import AutoLay from 'layout:default';
 import Hero from 'component:hero';
-import Speaker from 'component:addon/speaker';
+// import Speaker from 'component:addon/speaker';
 
 const path = Astro.request.url.pathname.split('/').pop();
 const { content } = Astro.props;
@@ -13,6 +13,9 @@ const { content } = Astro.props;
     <style>
       article {
         line-height:1.75em;
+      }
+      img {
+        max-width: 80vw;
       }
     </style>
   </head>

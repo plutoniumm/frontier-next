@@ -6,7 +6,6 @@ const by = {
     pcl: "Princess Caroline",
     sln: "Sarah Lynn",
     mpb: "Mr. Peanutbutter"
-
 };
 
 export default bojack = [

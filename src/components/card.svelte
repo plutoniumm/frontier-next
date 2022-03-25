@@ -18,7 +18,7 @@
             src="http://placehold.jp/1/ddd/ffffff/8x5.png"
             alt=""
         />
-        <br />
+        <!-- <br />
         <div class="body p20 fw4">
             <mark class="vibe">SAMPLE TITLE</mark> <br /><br />
             <mark class="†j vibe" style="line-height: 1.5em;">
@@ -26,7 +26,7 @@
                 Architecto nihil dignissimos velit vero quod quibusdam voluptate
                 blanditiis expedita dolor veniam.
             </mark>
-        </div>
+        </div> -->
     {:then post}
         <img
             class="w-100"
@@ -101,7 +101,7 @@
             width: calc(90% - 40px);
             left: 5%;
             bottom: 5%;
-            --sz: 4px;
+            --sz: 8px;
             --bg: #fff8;
         }
 

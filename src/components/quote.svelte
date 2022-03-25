@@ -5,7 +5,7 @@
         url = "#";
 
     let innerWidth;
-    const quote = bojack[Math.round(Math.random() * bojack.length)];
+    const quote = bojack[Math.round(((new Date() % 10) * bojack.length) / 10)];
 </script>
 
 <svelte:window bind:innerWidth />
@@ -39,6 +39,7 @@
         font-size: 18px;
         contain: content;
         min-width: 300px;
+        margin-top: 10px;
         display: inline-block;
         text-wrap: break-word;
         overflow: hidden;
@@ -53,7 +54,7 @@
             width: calc(25% - 20px);
         }
         &.md {
-            width: calc(33% - 20px);
+            width: calc(33% - 30px);
         }
         &.lg {
             width: calc(50% - 20px);

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font: 300 16px Helvetica;
+        }
+    </style>
+
+    <script type="module">
+        import { getCode } from "./lib/rogue.js";
+
+        document.querySelectorAll( ".astro-code" ).forEach( code => {
+            const processed = getCode( code );
+            if ( !processed ) return;
+        } );
+    </script>
+</head>
+
+<body>
+    <h1>CSV</h1>
+
+    <pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code is:raw=""><span class="line"><span style="color: #c9d1d9">[[CSV]]</span></span>
+<span style="color: #c9d1d9">{"format":"Table"}</span></span>
+<span style="color: #c9d1d9">[[CSV]]</span></span>
+<span class="line"><span style="color: #c9d1d9">firstName,lastName,email,phoneNumber</span></span>
+<span class="line"><span style="color: #c9d1d9">John,Doe,john@doe.com,0123456789</span></span>
+<span class="line"><span style="color: #c9d1d9">Jane,Doe,jane@doe.com,9876543210</span></span>
+<span class="line"><span style="color: #c9d1d9">James,Bond,james.bond@mi6.co.uk,0612345678</span></span></code></pre>
+
+</body>
+
+</html>

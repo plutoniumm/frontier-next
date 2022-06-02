@@ -1,0 +1,7 @@
+{
+    "files.exclude": {
+        "**\/.github\/": true,
+        "**\/tasks\/": true,
+        "**\/drafts\/": true
+    }
+}

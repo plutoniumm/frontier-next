@@ -23,7 +23,7 @@ const all_posts = process.url(Astro.fetchContent('./**/*.md')).sort(sorter);
 	</head>
 	<body>
 		<AutoLay>
-		<section class="ƒ ƒ∑ ∆-bw mx-a" style="max-width: 1200px;">
+		<section class="ƒ ƒ∑ ∆-bw mx-a">
 			<div class="w-100">
 				<Alert level="5" text="I am currently on hiatus right now, blogs are being improved"/>
 				<!-- <Alert level="1" text="This is still a work in progress!, I've just put it back up for my own convenience"/> -->
@@ -41,7 +41,10 @@ const all_posts = process.url(Astro.fetchContent('./**/*.md')).sort(sorter);
 				<hr class="mx-a o-50" style="width:calc(75%)" />
 			</div>
 
-			{all_posts.slice(2).map((post, index) => (
+			{all_posts.slice(2,12).map((post, index) => (
+				<Card {...post} client:load />
+			))}
+			{all_posts.slice(12).map((post, index) => (
 				<Card {...post} client:visible />
 			))}
 		</section>

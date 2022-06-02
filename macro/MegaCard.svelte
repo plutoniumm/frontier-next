@@ -1,5 +1,5 @@
 <script>
-	import { time, tags } from "./process";
+	import { since, tags } from "./process";
 	import { onMount } from "svelte";
 	export let //
 		url;
@@ -77,7 +77,7 @@
 				/>
 				<span class="px-1">{post.name}</span> •
 				<span class="font-weight-normal px-1">
-					{time(post.pubDate)}
+					{since(post.pubDate)}
 				</span>
 			</div>
 		</div>

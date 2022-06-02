@@ -1,4 +1,4 @@
-export const time = ( val ) => {
+export const since = ( val ) => {
     val = 0 | ( ( Date.now() - new Date( val ) ) / 1000 );
 
     let //

@@ -55,5 +55,6 @@ function serve () {
 
 export default [
 	getComponentConfig( 'MegaCard' ),
+	getComponentConfig( 'Table' ),
 	getComponentConfig( 'Overlay' )
 ];

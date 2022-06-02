@@ -2,14 +2,19 @@
     export let //
         path;
 
-    import { db, process, handle } from "lib";
+    import { db, process } from "lib";
+    import Overlay from "ui:overlay";
 
-    const enlargeImage = (e) => {
-        const image = e.target;
+    let //
+        large = false;
 
-        handle.overlay("img", image);
-        return 0;
+    const getTitle = (global) => {
+        const { title, part } = global;
+        window.title = `${title} | Frontier`;
+        return `${part ? `Part ${part} | ` : ""}${title}`;
     };
+
+    const flip = () => (large = !large);
 
     const promise = Promise.all([db.get(path), db.related(path)]);
 </script>
@@ -21,39 +26,41 @@
         {@const response = reply[0]}
         {@const related = process.related(reply[1], path)}
 
-        <h1>
-            {#if response.part}Part {response.part} |{/if}
-            {response.title}
-        </h1>
-
-        <title>{response.title} | Frontier</title>
+        <h1>{getTitle(response)}</h1>
 
         <div class="nav w-100 ƒ ∆-bw">
-            {#if related.prev}
-                <a href={related.prev}>&larr; Prev</a>
-            {:else}
-                <div>&nbsp</div>
-            {/if}
+            <a href={related.prev}>
+                {#if related.prev}&larr; Prev{:else}&nbsp;{/if}
+            </a>
 
             <div>{process.date.format(path)}</div>
 
-            {#if related.next}
-                <a href={related.next}>Next &rarr;</a>
-            {:else}
-                <div>&nbsp</div>
-            {/if}
+            <a href={related.next}>
+                {#if related.next}Next &rarr;{:else}&nbsp;{/if}
+            </a>
         </div>
 
-        <div
-            on:click={enlargeImage}
-            class="img p-rel w-100"
-            style={`--bg: url("${process.image(response.count)}")`}
-        >
+        <div on:click={flip} class="img p-rel w-100">
+            <img
+                class="w-100"
+                src={process.image(response.count)}
+                alt={response.cover}
+            />
             <div class="cover p-abs w-100">{response.cover}</div>
         </div>
-        <!-- <div class="sources">
-            {JSON.stringify(response.source)}
-        </div> -->
+
+        {#if large}
+            <Overlay state={large} on:click={flip}>
+                <img
+                    width="80%"
+                    src={process.image(response?.count)}
+                    alt={response?.cover}
+                />
+                <div class="fw3 p20" style="font-size:1.25rem;">
+                    {response?.cover}
+                </div>
+            </Overlay>
+        {/if}
     {/await}
 </div>
 
@@ -62,9 +69,6 @@
         padding: 5px 0;
     }
     .img {
-        background: var(--bg) no-repeat;
-        background-size: cover;
-        background-position: center center;
         overflow: hidden;
         height: 300px !important;
     }

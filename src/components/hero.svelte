@@ -40,7 +40,11 @@
             </a>
         </div>
 
-        <div on:click={flip} class="img p-rel w-100">
+        <div
+            on:click={flip}
+            class="p-rel w-100"
+            style="overflow: hidden;height: 300px !important;"
+        >
             <img
                 class="w-100"
                 src={process.image(response.count)}
@@ -67,10 +71,6 @@
 <style lang="scss">
     .nav {
         padding: 5px 0;
-    }
-    .img {
-        overflow: hidden;
-        height: 300px !important;
     }
     .cover {
         background: linear-gradient(transparent, #000);

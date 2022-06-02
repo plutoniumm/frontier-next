@@ -2,7 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@rollup/plugin-commonjs': ^17.0.0
-  '@rollup/plugin-node-resolve': 13.1.3
+  '@rollup/plugin-node-resolve': 13.3.0
   astro: 0.22.20
   autoprefixer: ^10.4.2
   cors: ^2.8.5
@@ -31,7 +31,7 @@ optionalDependencies:
 
 devDependencies:
   '@rollup/plugin-commonjs': 17.1.0_rollup@2.67.2
-  '@rollup/plugin-node-resolve': 13.1.3_rollup@2.67.2
+  '@rollup/plugin-node-resolve': 13.3.0_rollup@2.67.2
   astro: 0.22.20_postcss-load-config@3.1.3
   autoprefixer: 10.4.2_postcss@8.4.14
   postcss: 8.4.14
@@ -338,6 +338,8 @@ packages:
     resolution: {integrity: sha512-VKXSCQx5D8S04ej+Dqsr1CzYvvWgf20jIw2D+YhQCrIlr2UZGaDds23Y0xg75/skOxpLCRpUZvk/1EAVkGoDOw==}
     engines: {node: '>=6.0.0'}
     hasBin: true
+    dependencies:
+      '@babel/types': 7.17.0
     dev: true
 
   /@babel/plugin-syntax-jsx/7.16.7_@babel+core@7.17.2:
@@ -492,16 +494,16 @@ packages:
       rollup: 2.67.2
     dev: true
 
-  /@rollup/plugin-node-resolve/13.1.3_rollup@2.67.2:
-    resolution: {integrity: sha512-BdxNk+LtmElRo5d06MGY4zoepyrXX1tkzX2hrnPEZ53k78GuOMWLqmJDGIIOPwVRIFZrLQOo+Yr6KtCuLIA0AQ==}
+  /@rollup/plugin-node-resolve/13.3.0_rollup@2.67.2:
+    resolution: {integrity: sha512-Lus8rbUo1eEcnS4yTFKLZrVumLPY+YayBdWXgFSHYhTT2iJbMhoaaBL3xl5NCdeRytErGr8tZ0L71BMRmnlwSw==}
     engines: {node: '>= 10.0.0'}
     peerDependencies:
       rollup: ^2.42.0
     dependencies:
       '@rollup/pluginutils': 3.1.0_rollup@2.67.2
       '@types/resolve': 1.17.1
-      builtin-modules: 3.2.0
       deepmerge: 4.2.2
+      is-builtin-module: 3.1.0
       is-module: 1.0.0
       resolve: 1.22.0
       rollup: 2.67.2
@@ -788,6 +790,12 @@ packages:
       negotiator: 0.6.3
     dev: false
 
+  /acorn/8.7.1:
+    resolution: {integrity: sha512-Xx54uLJQZ19lKygFXOWsscKUbsBZW0CPykPhVQdhIeIwrbPmJzqeASDInc8nKBnp/JT6igTs82qPXz069H8I/A==}
+    engines: {node: '>=0.4.0'}
+    hasBin: true
+    dev: true
+
   /ansi-regex/6.0.1:
     resolution: {integrity: sha512-n5M855fKb2SsfMIiFFoVrABHJC8QtHwVx+mHWP3QcEqBHYienj5dHSgjbxtC0WEZXYt4wcD6zrQElDPhFuZgfA==}
     engines: {node: '>=12'}
@@ -963,6 +971,8 @@ packages:
       raw-body: 2.5.1
       type-is: 1.6.18
       unpipe: 1.0.0
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /brace-expansion/1.1.11:
@@ -1109,6 +1119,8 @@ packages:
       finalhandler: 1.1.2
       parseurl: 1.3.3
       utils-merge: 1.0.1
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /console-clear/1.1.1:
@@ -1163,6 +1175,11 @@ packages:
 
   /debug/2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
     dependencies:
       ms: 2.0.0
 
@@ -1798,6 +1815,8 @@ packages:
       type-is: 1.6.18
       utils-merge: 1.0.1
       vary: 1.1.2
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /extend-shallow/2.0.1:
@@ -1862,6 +1881,8 @@ packages:
       parseurl: 1.3.3
       statuses: 1.5.0
       unpipe: 1.0.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /finalhandler/1.2.0:
@@ -1875,6 +1896,8 @@ packages:
       parseurl: 1.3.3
       statuses: 2.0.1
       unpipe: 1.0.0
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /foreach/2.0.5:
@@ -2253,6 +2276,13 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
+  /is-builtin-module/3.1.0:
+    resolution: {integrity: sha512-OV7JjAgOTfAFJmHZLvpSTb4qi0nIILDV1gWPYDnDJUTNFM5aGlRAhk4QcT8i7TuAleeEV5Fdkqn3t4mS+Q11fg==}
+    engines: {node: '>=6'}
+    dependencies:
+      builtin-modules: 3.2.0
+    dev: true
+
   /is-callable/1.2.4:
     resolution: {integrity: sha512-nsuwtxZfMX67Oryl9LCQ+upnC0Z0BgpwntpS89m1H/TLF0zNfzfLMV/9Wa/6MZsj0acpEjAO0KF1xT6ZdLl95w==}
     engines: {node: '>= 0.4'}
@@ -2304,7 +2334,7 @@ packages:
     dev: true
 
   /is-module/1.0.0:
-    resolution: {integrity: sha1-Mlj7afeMFNW4FdZkM2tM/7ZEFZE=}
+    resolution: {integrity: sha512-51ypPSPCoTEIN9dy5Oy+h4pShgJmPCygKfyRCISBI+JoWT/2oJvK8QPxmwv7b/p239jXrm9M1mlQbyKJ5A152g==}
     dev: true
 
   /is-nan/1.3.2:
@@ -3514,8 +3544,6 @@ packages:
       rollup: 2.67.2
       serialize-javascript: 4.0.0
       terser: 5.10.0
-    transitivePeerDependencies:
-      - acorn
     dev: true
 
   /rollup-pluginutils/2.8.2:
@@ -3625,6 +3653,8 @@ packages:
       on-finished: 2.3.0
       range-parser: 1.2.1
       statuses: 1.5.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /send/0.18.0:
@@ -3644,6 +3674,8 @@ packages:
       on-finished: 2.4.1
       range-parser: 1.2.1
       statuses: 2.0.1
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /serialize-javascript/4.0.0:
@@ -3660,6 +3692,8 @@ packages:
       escape-html: 1.0.3
       parseurl: 1.3.3
       send: 0.18.0
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /setprototypeof/1.2.0:
@@ -3936,12 +3970,11 @@ packages:
     resolution: {integrity: sha512-AMmF99DMfEDiRJfxfY5jj5wNH/bYO09cniSqhfoyxc8sFoYIgkJy86G04UoZU5VjlpnplVu0K6Tx6E9b5+DlHA==}
     engines: {node: '>=10'}
     hasBin: true
-    peerDependencies:
-      acorn: ^8.5.0
     peerDependenciesMeta:
       acorn:
         optional: true
     dependencies:
+      acorn: 8.7.1
       commander: 2.20.3
       source-map: 0.7.3
       source-map-support: 0.5.21

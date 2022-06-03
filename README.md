@@ -5,7 +5,6 @@
 </div>
 
 ## Todos
-- WebSpeech API to speak article - 10%
 - Search
 - TOC
 - Digestor

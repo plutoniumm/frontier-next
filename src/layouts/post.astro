@@ -2,42 +2,45 @@
 import Head from './head.astro';
 import AutoLay from 'layout:default';
 import Hero from 'component:hero';
-// import Speaker from 'component:addon/speaker';
 
 const path = Astro.request.url.pathname.split('/').pop();
 const { content } = Astro.props;
 ---
-<html>
-  <head>
-    <Head title={content.title} description={content.description}/>
-    <style>
-      article {
-        line-height:1.75em;
-      }
-      img {
-        max-width: 80vw;
-      }
-    </style>
-  </head>
 
-  <body>
-    <AutoLay>
-      <Hero {path} client:only="svelte"/>
-      <article class="mx-a fw3">
-        <slot />
-      </article>
-      <!-- <Speaker client:only="svelte"/> -->
-    </AutoLay>
-  </body>
+<html>
+
+<head>
+
+  <Head title={content.title} description={content.description} />
+  <style>
+    article {
+      line-height: 1.75em;
+    }
+
+    img {
+      max-width: 80vw;
+    }
+  </style>
+</head>
+
+<body>
+  <AutoLay>
+    <Hero {path} client:only="svelte" />
+    <article class="mx-a fw3">
+      <slot />
+    </article>
+  </AutoLay>
+</body>
+
 </html>
 
 <script>
   const article = document.querySelector('article');
   let article_text = article.innerHTML;
 
-  import('/js/switch.js').then(r=>{
-    r.default.forEach(s=>article_text = article_text.replaceAll(s[0], s[1]));
+  import('/js/switch.js').then(r => {
+    r.default.forEach(s => article_text = article_text.replaceAll(s[0], s[1]));
 
-    article.innerHTML= article_text;
+    article.innerHTML = article_text;
   });
 </script>

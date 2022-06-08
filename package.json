@@ -31,6 +31,6 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.1",
-    "predefined": "1.1.0"
+    "predefined": "1.2.5"
   }
 }

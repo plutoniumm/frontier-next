@@ -10,7 +10,7 @@
     "git": "sh ./scripts/git.sh"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-commonjs": "22.0.1",
     "@rollup/plugin-node-resolve": "13.3.0",
     "astro": "0.22.20",
     "autoprefixer": "^10.4.2",
